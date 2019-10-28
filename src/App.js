@@ -46,8 +46,8 @@ function App() {
   };
 
   const onScorePoint = () => {
-    // const newScore = score + 10 * level;
-    // newScore > score && setScore(newScore);
+    const newScore = score + 10 * level;
+    newScore > score && setScore(newScore);
   };
 
   const handleNextLevel = () => {

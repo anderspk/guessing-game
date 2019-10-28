@@ -16,11 +16,10 @@ const Content = ({ cards, handleNextLevel, scorePoint }) => {
           if (first && second && first.robot !== second.robot) {
             removeTwoLatestCards();
           } else {
-            console.log("solvedcards", solvedCards.length);
             if (solvedCards.length > 0 && solvedCards.length === cards.length) {
               setSolvedCards([]);
               handleNextLevel();
-            } else scorePoint();
+            } else if (solvedCards.length > 0) scorePoint();
           }
           setLock(false);
         }, 250);
