@@ -11,7 +11,7 @@ const Sidebar = ({ newGame, game, handleGameOver }) => {
 
   const fetchHighScores = async () => {
     const { data } = await axios.get("https://crudpi.io/017852/score");
-    setHighScores(data.sort((a, b) => b-score - a.score).splice(0, 10));
+    setHighScores(data.sort((a, b) => b.score - a.score).splice(0, 10));
   };
 
   return (
